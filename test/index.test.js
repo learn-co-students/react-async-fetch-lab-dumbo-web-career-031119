@@ -18,7 +18,7 @@ describe('<App />', () => {
 
   before(() => {
     global.fetch = require('node-fetch')
-    fetchMock.get('*', {people: [{name:"Stimpy"}]})
+    fetchMock.get('*', {people: [{name:"Stimpy"}]}, { overwriteRoutes: false })
     fetchSpy = spy(global, "fetch")
 
   })
